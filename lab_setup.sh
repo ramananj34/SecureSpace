@@ -2,7 +2,7 @@
 set -euo pipefail
 
 #Load secrets
-if [! -f secrets.sh]; then
+if [ ! -f secrets.sh ]; then
     echo "ERROR: secrets.sh not found."
     exit 1
 fi
@@ -14,5 +14,5 @@ git config --global user.name "$GIT_USERNAME"
 git remote set-url origin "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git"
 
 #Conda env
-conda env create -f environment.yml
+conda env create -f environment.yaml
 conda run -n amrcc python -m ipykernel install --user --name securespace --display-name "Python (securespace)"
