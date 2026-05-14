@@ -14,5 +14,5 @@ git config --global user.name "$GIT_USERNAME"
 git remote set-url origin "https://${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git"
 
 #Conda env
-conda env create -f environment.yaml
+conda env create -f enviroment.yaml
 conda run -n securespace python -m ipykernel install --user --name securespace --display-name "Python (securespace)"
