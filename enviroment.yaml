@@ -6,16 +6,11 @@ channels:
 dependencies:
   - python=3.11
   - pip
-  - numpy>=1.26
-  - scipy>=1.11
-  - pandas>=2.1
-  - matplotlib>=3.8
-  - pytorch>=2.1
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - pytorch
   - tqdm
-  - numba
-  - networkx
-  - cryptography
   - jupyter
-  - pytest
-  - pip:
-    - pyldpc
+  - ipykernel
