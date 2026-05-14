@@ -1,2 +1,6 @@
 secrets.sh
 .ipynb_checkpoints/
+
+smap_msl_data/2018-05-19_15.00.10/
+smap_msl_data/test/
+smap_msl_data/train/
