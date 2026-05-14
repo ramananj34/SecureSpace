@@ -1,4 +1,4 @@
-name: SecureSpace
+name: securespace
 channels:
   - pytorch
   - conda-forge
