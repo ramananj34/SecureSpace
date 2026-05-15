@@ -5,3 +5,5 @@ smap_msl_data/2018-05-19_15.00.10/
 smap_msl_data/test/
 smap_msl_data/train/
 smap_msl_data/__pycache__/
+runs/
+telemanom_reproduction/__pycache__/
