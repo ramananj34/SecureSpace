@@ -1,0 +1,22 @@
+VENDORED FROM TELEMANOM (NASA JPL)
+
+This directory contains code vendored from:
+
+Project:  telemanom
+Source:   https://github.com/khundman/telemanom
+Authors:  Kyle Hundman, Valentino Constantinou, Christopher Laporte, Ian Colwell, Tom Soderstrom (NASA JPL)
+License:  BSD-3-CLAUSE
+Copyright: (c) 2018, California Institute of Technology ("Caltech"). U.S. Government sponsorship acknowledged.
+Paper:    Hundman et al., "Detecting Spacecraft Anomalies Using LSTMs and Nonparametric Dynamic Thresholding", KDD 2018.
+
+If you use this code, please cite:
+
+@inproceedings{hundman2018detecting,
+  title={Detecting spacecraft anomalies using lstms and nonparametric dynamic thresholding},
+  author={Hundman, Kyle and Constantinou, Valentino and Laporte, Christopher and Colwell, Ian and Soderstrom, Tom},
+  booktitle={Proceedings of the 24th ACM SIGKDD international conference on knowledge discovery \& data mining},
+  pages={387--395},
+  year={2018}
+}
+
+Modifications made are marked with "#AMRCC-mod:"
