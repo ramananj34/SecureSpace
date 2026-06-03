@@ -7,3 +7,4 @@ smap_msl_data/train/
 smap_msl_data/__pycache__/
 runs/
 telemanom_reproduction/__pycache__/
+telemanom_reproduction/VENDOR_telemanom/__pycache__/
