@@ -1,0 +1,62 @@
+### Current Status: 
+- Acquired Datasets and trained LTSMs
+- Reproduced Telemanon results
+- Built DVB-S2 LDPCs
+
+### Next steps:
+- FGSM/PGD baseline attacks
+
+```
+└── .gitignore
+└── enviroment.yaml
+└── lab_setup.sh
+└── secrets.sh
+└── README.txt
+└── runs/...
+├── ldpc/
+│   └── __init__.py
+│   └── codeword_enumeration.py
+│   └── dvb_s2_ldpc.py
+│   └── dvb_s2_short.py
+│   └── tanner_graph.py
+│   ├── tests/
+│   │   └── __init__.py
+│   │   └── exaust_tanner.py
+│   │   └── test_codeword_enumeration.py
+│   │   └── test_encoding.py
+│   │   └── test_encoding_short.py
+│   │   └── test_tanner.py
+├── smap_msl_data/
+│   └── channel_manifest.csv
+│   └── channel_manifest.py
+│   └── download_data.sh
+│   └── inspect_data.ipynb
+│   └── labeled_anomalies.csv
+│   └── smap_msl_dataset_api.py
+│   └── smap_msl_dataset_api_end2endtests.py
+│   └── smap_msl_dataset_api_realtests.py
+│   └── smap_msl_dataset_api_unit_tests.py
+│   └── test/...
+│   └── train/...
+│   └── 2018-05-19_15.00.10/...
+├── telemanom_reproduction/
+│   ├── VENDOR_telemanom/
+│   │   └── LICENSE.txt
+│   │   └── NOTICE.txt
+│   │   └── __init__.py
+│   │   └── aggregation.py
+│   │   └── channel.py
+│   │   └── errors.py
+│   │   └── vendor_config.py
+│   └── analyze_all_channels.py
+│   └── eval_all_channels.py
+│   └── ltsm_trainer.py
+│   └── pipeline.py
+│   └── pipeline_spot_test.py
+│   └── smapmsl_data_pytorch_wrapper.py
+│   └── synth_check.py
+│   └── telemanom_lstm.py
+│   └── train_all_channels.py
+│   └── train_one_channel.py
+│   └── vendor_smoke_test.py
+```
