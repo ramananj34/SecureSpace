@@ -8,7 +8,7 @@ class Errors:
         self.config = config
         self.window_size = self.config.window_size
         self.n_windows = int((channel.y_test.shape[0] - (self.config.batch_size * self.window_size)) / self.config.batch_size)
-        self.i_anom = np.array([])
+        self.i_anom = np.array([], dtype=int)
         self.E_seq = []
         self.anom_scores = []
         self.e = [abs(y_h - y_t[0]) for y_h, y_t in zip(channel.y_hat, channel.y_test)]
@@ -63,10 +63,10 @@ class Errors:
 class ErrorWindow:
 
     def __init__(self, channel, config, start_idx, end_idx, errors, window_num):
-        self.i_anom = np.array([])
+        self.i_anom = np.array([], dtype=int)
         self.E_seq = np.array([])
         self.non_anom_max = -1000000
-        self.i_anom_inv = np.array([])
+        self.i_anom_inv = np.array([], dtype=int)
         self.E_seq_inv = np.array([])
         self.non_anom_max_inv = -1000000
         self.config = config
@@ -137,7 +137,7 @@ class ErrorWindow:
         window_indices = np.arange(0, len(e_s)) + batch_position
         adj_i_anom = i_anom + batch_position
         window_indices = np.setdiff1d(window_indices, np.append(errors_all.i_anom, adj_i_anom))
-        candidate_indices = np.unique(window_indices - batch_position)
+        candidate_indices = np.unique(window_indices - batch_position).astype(int)
         non_anom_max = np.max(np.take(e_s, candidate_indices))
         groups = [list(group) for group in mit.consecutive_groups(i_anom)]
         E_seq = [(g[0], g[-1]) for g in groups if not g[0] == g[-1]]
@@ -159,20 +159,21 @@ class ErrorWindow:
         E_seq_max = np.array([max(e_s[e[0]:e[1] + 1]) for e in E_seq])
         E_seq_max_sorted = np.sort(E_seq_max)[::-1]
         E_seq_max_sorted = np.append(E_seq_max_sorted, [non_anom_max])
-        i_to_remove = np.array([])
+        i_to_remove = np.array([], dtype=int)
         for i in range(0, len(E_seq_max_sorted) - 1):
             if (E_seq_max_sorted[i] - E_seq_max_sorted[i + 1]) / E_seq_max_sorted[i] < self.config.p:
-                i_to_remove = np.append(i_to_remove,np.argwhere(E_seq_max == E_seq_max_sorted[i]))
+                i_to_remove = np.append(i_to_remove, np.argwhere(E_seq_max == E_seq_max_sorted[i]))
             else:
-                i_to_remove = np.array([])
+                i_to_remove = np.array([], dtype=int)
+        i_to_remove = i_to_remove.astype(int)
         i_to_remove[::-1].sort()
         if len(i_to_remove) > 0:
             E_seq = np.delete(E_seq, i_to_remove, axis=0)
         if len(E_seq) == 0 and inverse:
-            self.i_anom_inv = np.array([])
+            self.i_anom_inv = np.array([], dtype=int)
             return
         elif len(E_seq) == 0 and not inverse:
-            self.i_anom = np.array([])
+            self.i_anom = np.array([], dtype=int)
             return
         indices_to_keep = np.concatenate([range(e_seq[0], e_seq[-1] + 1) for e_seq in E_seq])
         if not inverse:
