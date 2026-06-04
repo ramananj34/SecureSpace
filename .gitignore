@@ -8,3 +8,5 @@ smap_msl_data/__pycache__/
 runs/
 telemanom_reproduction/__pycache__/
 telemanom_reproduction/VENDOR_telemanom/__pycache__/
+ldpc/__pycache__/
+ldpc/tests/__pycache__/
