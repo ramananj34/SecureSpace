@@ -167,8 +167,7 @@ def attack_anomaly(chan_id, model, train_features, tele, cmds, labels, label, cf
     pgd_hit_miss, used, last_E, d_best = False, 0, None, None
     for r in range(atk.n_restarts):
         init = torch.zeros(T, device=device) if r == 0 else _rand_init(eps, F_t, T, gen)
-        d = pgd(model, tau_t, cmds_t, F_t, P, eps, atk.T_steps, eps / 4.0, l_s,
-                init, atk.batch_windows)
+        d = pgd(model, tau_t, cmds_t, F_t, P, eps, atk.T_steps, eps / 4.0, l_s, init, atk.batch_windows)
         last_E = eval_delta(d)
         d_best = d
         used = r + 1

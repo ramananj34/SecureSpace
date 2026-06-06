@@ -166,7 +166,7 @@ def verify_h_matrix(H: csr_matrix, params: DVBS2Params, expected_total_ones: int
     return info
 
 def verify_dvbs2_long_rate12_specifics(H: csr_matrix) -> dict:
-    expected_nnz = 226799  # LINKS_TOTAL from ETSI Table B.4 metadata
+    expected_nnz = 226799
     info = verify_h_matrix(H, RATE_1_2_LONG, expected_total_ones=expected_nnz)
     rwd = info["row_weight_distribution"]
     assert rwd == {6: 1, 7: 32399}, f"Row weight distribution mismatch: {rwd}"
