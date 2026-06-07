@@ -18,3 +18,4 @@ dependencies:
   - pip:
     - kaggle
     - more-itertools
+    - cupy-cuda12x
