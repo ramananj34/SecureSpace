@@ -13,4 +13,4 @@ conda activate securespace
 
 cd /home/jramanan/SecureSpace
 
-python nullspace_attack/tests/verify_nullspace_long_ge_gpu.py 2>&1 | tee nullspace_longGE_log.txt
+python nullspace_attack/tests/verify_null_space_long_ge_gpu.py 2>&1 | tee nullspace_longGE_log.txt
