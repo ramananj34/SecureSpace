@@ -83,7 +83,7 @@ def run_channel(chan_id, data_dir, runs_dir, cfg, ccfg, stratum):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", default=str(_ROOT / "runs_e1_ceiling"))
+    ap.add_argument("--out", default=str(_ROOT / "baseline_fgsm_pgd/runs"))
     ap.add_argument("--data-dir", default=str(_ROOT / "smap_msl_data"))
     ap.add_argument("--runs-dir", default=str(_ROOT / "runs"))
     ap.add_argument("--force", action="store_true")
