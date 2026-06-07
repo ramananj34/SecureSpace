@@ -5,8 +5,8 @@ _THIS_DIR = Path(__file__).resolve().parent
 _PROJECT_ROOT = _THIS_DIR.parent.parent
 sys.path.insert(0, str(_PROJECT_ROOT))
 import numpy as np
-import nullspace.gf2 as gf2
-from nullspace.ldpc_ops import LDPCCode
+import nullspace_attack.gf2 as gf2
+from nullspace_attack.ldpc_ops import LDPCCode
 
 def pack_sparse(M, n_cols: int) -> np.ndarray:
     coo = M.tocoo()
