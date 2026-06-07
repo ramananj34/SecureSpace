@@ -2,9 +2,10 @@
 - Acquired Datasets and trained LTSMs
 - Reproduced Telemanon results
 - Built DVB-S2 LDPCs
+- PGD baseline attack
 
 ### Next steps:
-- FGSM/PGD baseline attacks
+- Null-space PGD
 
 ```
 └── .gitignore
@@ -26,6 +27,13 @@
 │   │   └── test_encoding.py
 │   │   └── test_encoding_short.py
 │   │   └── test_tanner.py
+├── baseline_fgsm_pgd/
+│   └── runs/...
+│   └── ceil_attack.py
+│   └── fgsm_pgd_attacks.py
+│   └── test_attacks.py
+│   └── e1_ceil.py
+│   └── fgsm_pgd_attacks_viz.ipynb
 ├── smap_msl_data/
 │   └── channel_manifest.csv
 │   └── channel_manifest.py

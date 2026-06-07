@@ -118,6 +118,29 @@ def build_dvbs2_h_long_rate12() -> csr_matrix:
     params = RATE_1_2_LONG
     return _build_h_from_tables(high_rows=B4_HIGH_DEGREE_ROWS, low_rows=B4_LOW_DEGREE_ROWS, params=params)
 
+def encode_dvbs2_long_rate12(info_bits: np.ndarray) -> np.ndarray:
+    p = RATE_1_2_LONG
+    n, k = p.n, p.k
+    M, q = p.M, p.q
+    n_minus_k = p.n_minus_k
+    assert info_bits.shape == (k,), f"Info bits shape: {info_bits.shape}"
+    assert info_bits.dtype in (np.int8, np.uint8, np.int32, np.int64, bool)
+    parity = np.zeros(n_minus_k, dtype=np.int8)
+    all_rows = B4_HIGH_DEGREE_ROWS + B4_LOW_DEGREE_ROWS
+    for m in range(k):
+        i_m = int(info_bits[m])
+        if i_m == 0:
+            continue
+        row = m // M
+        col = m % M
+        for x in all_rows[row]:
+            check_idx = (x + col * q) % n_minus_k
+            parity[check_idx] ^= 1
+    for j in range(1, n_minus_k):
+        parity[j] ^= parity[j - 1]
+    codeword = np.concatenate([info_bits.astype(np.int8), parity])
+    return codeword
+
 def _build_h_from_tables(high_rows: list[list[int]], low_rows: list[list[int]], params: DVBS2Params) -> csr_matrix:
     n = params.n
     k = params.k

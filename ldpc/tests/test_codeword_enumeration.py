@@ -4,7 +4,7 @@ _THIS_DIR = Path(__file__).resolve().parent
 _PROJECT_ROOT = _THIS_DIR.parent.parent
 sys.path.insert(0, str(_PROJECT_ROOT))
 from ldpc.dvb_s2_ldpc import build_dvbs2_h_long_rate12, RATE_1_2_LONG
-from ldpc.tests.test_encoding import encode_dvbs2_long_rate12
+from ldpc.dvb_s2_ldpc import encode_dvbs2_long_rate12
 from ldpc.codeword_enumeration import (random_codeword_weights, low_weight_codeword_search_unit_info, low_weight_codeword_search_pair_info)
 
 print('Building H matrix...')
