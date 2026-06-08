@@ -1,0 +1,7 @@
+Backend: numpy CPU fallback (cupy unavailable: cudaErrorNoDevice: no CUDA-capable device is detected)
+[dvbs2-long-r1/2]  n=64800 k=32400 m=32400
+  H packed: (32400, 1013) uint64, 263 MB
+  running GF(2) Gauss-Jordan rank(H)...
+  GE rank(H) = 32400  (823.5s)
+  rank(H) = n-k = 32400  ->  dim N(H) = n - rank(H) = 32400 = k = 32400
+Long-frame GE rank confirmation PASSED.
