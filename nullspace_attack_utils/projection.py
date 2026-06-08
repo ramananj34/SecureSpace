@@ -1,7 +1,7 @@
 from __future__ import annotations
 import numpy as np
-import nullspace_attack.gf2 as gf2
-from nullspace_attack.ldpc_ops import LDPCCode
+import nullspace_attack_utils.gf2 as gf2
+from nullspace_attack_utils.ldpc_ops import LDPCCode
 __all__ = ["b_transpose_apply", "information_set_matrix", "is_information_set", "project_information_set", "normal_form_matrix", "normal_form_projection"]
 
 def b_transpose_apply(code: LDPCCode, delta_prime: np.ndarray, P_packed: np.ndarray) -> np.ndarray:

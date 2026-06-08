@@ -5,9 +5,9 @@ _PROJECT_ROOT = _THIS_DIR.parent.parent
 sys.path.insert(0, str(_PROJECT_ROOT))
 import numpy as np
 import scipy.sparse as sp
-import nullspace_attack.gf2 as gf2
-from nullspace_attack.ldpc_ops import LDPCCode
-from nullspace_attack.projection import (b_transpose_apply, information_set_matrix, is_information_set, project_information_set, normal_form_matrix, normal_form_projection)
+import nullspace_attack_utils.gf2 as gf2
+from nullspace_attack_utils.ldpc_ops import LDPCCode
+from nullspace_attack_utils.projection import (b_transpose_apply, information_set_matrix, is_information_set, project_information_set, normal_form_matrix, normal_form_projection)
 
 def tiny_systematic_code(n=24, k=12, seed=1):
     rng = np.random.default_rng(seed)

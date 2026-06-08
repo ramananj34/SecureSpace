@@ -6,7 +6,7 @@ sys.path.insert(0, str(_PROJECT_ROOT))
 sys.path.insert(0, str(_PROJECT_ROOT / "smap_msl_data"))
 import numpy as np
 from smap_msl_dataset_api import Quantizer
-from nullspace_attack.frame_packing import FramePlan, pack_frame, unpack_frame, channel_slice
+from nullspace_attack_utils.frame_packing import FramePlan, pack_frame, unpack_frame, channel_slice
 
 def _ok(name):
     print(f"  PASS  {name}")

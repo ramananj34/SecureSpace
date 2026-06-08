@@ -7,8 +7,8 @@ sys.path.insert(0, str(_PROJECT_ROOT / "smap_msl_data"))
 sys.path.insert(0, str(_PROJECT_ROOT / "telemanom_reproduction"))
 import numpy as np
 from smap_msl_dataset_api import Quantizer, SMAPMSLChannelDataset, working_channels
-from nullspace_attack.ldpc_ops import LDPCCode
-from nullspace_attack.frame_packing import FramePlan, pack_frame, unpack_frame, channel_slice
+from nullspace_attack_utils.ldpc_ops import LDPCCode
+from nullspace_attack_utils.frame_packing import FramePlan, pack_frame, unpack_frame, channel_slice
 DATA_DIR = _PROJECT_ROOT / "smap_msl_data"
 WINDOW = 100
 RUNS_DIR = _PROJECT_ROOT / "runs"

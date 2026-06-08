@@ -5,7 +5,7 @@ _THIS_DIR = Path(__file__).resolve().parent
 _PROJECT_ROOT = _THIS_DIR.parent.parent
 sys.path.insert(0, str(_PROJECT_ROOT))
 import numpy as np
-from nullspace_attack.ldpc_ops import LDPCCode, p_sys_column
+from nullspace_attack_utils.ldpc_ops import LDPCCode, p_sys_column
 
 def _representative_indices(k: int, M: int = 360) -> list[int]:
     cand = [0, 1, M - 1, M, M + 1, k // 4, k // 2, 3 * k // 4, k - 2, k - 1]

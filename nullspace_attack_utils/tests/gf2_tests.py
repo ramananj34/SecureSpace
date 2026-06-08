@@ -5,7 +5,7 @@ _THIS_DIR = Path(__file__).resolve().parent
 _PROJECT_ROOT = _THIS_DIR.parent.parent
 sys.path.insert(0, str(_PROJECT_ROOT))
 import numpy as np
-from nullspace_attack.gf2 import (pack_bits, unpack_bits, gf2_matvec, gf2_matmul, rref, rank, solve, inverse, nullspace_basis)
+from nullspace_attack_utils.gf2 import (pack_bits, unpack_bits, gf2_matvec, gf2_matmul, rref, rank, solve, inverse, nullspace_basis)
 from ldpc.dvb_s2_short import build_dvbs2_h_short_rate12, encode_dvbs2_short_rate12, RATE_1_2_SHORT
 
 def _ref_rank_nulldim(A_bits: np.ndarray) -> tuple[int, int]:

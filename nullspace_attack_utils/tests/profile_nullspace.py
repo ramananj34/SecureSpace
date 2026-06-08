@@ -5,9 +5,9 @@ _THIS_DIR = Path(__file__).resolve().parent
 _PROJECT_ROOT = _THIS_DIR.parent.parent
 sys.path.insert(0, str(_PROJECT_ROOT))
 import numpy as np
-import nullspace_attack.gf2 as gf2
-from nullspace_attack.ldpc_ops import LDPCCode
-from nullspace_attack.projection import (b_transpose_apply, normal_form_matrix, project_information_set)
+import nullspace_attack_utils.gf2 as gf2
+from nullspace_attack_utils.ldpc_ops import LDPCCode
+from nullspace_attack_utils.projection import (b_transpose_apply, normal_form_matrix, project_information_set)
 
 def _time(fn, repeat=1):
     t0 = time.time()

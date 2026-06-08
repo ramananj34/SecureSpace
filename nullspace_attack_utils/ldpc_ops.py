@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from typing import Callable
 import numpy as np
 from scipy.sparse import csr_matrix
-from nullspace_attack.gf2 import unpack_bits
+from nullspace_attack_utils.gf2 import unpack_bits
 
 __all__ = ["LDPCCode", "p_sys_column"]
 
