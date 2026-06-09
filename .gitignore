@@ -7,3 +7,5 @@ runs/
 **/__pycache__/
 nullspace_attack/runs_pilot/
 nullspace_attack/runs_e2/
+nullspace_attack/runs_e3/
+nullspace_attack/runs_oracle/

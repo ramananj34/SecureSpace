@@ -7,7 +7,7 @@ _ROOT = _THIS.parent
 for _p in [str(_ROOT), str(_ROOT / "nullspace_attack_utils"), str(_ROOT / "ldpc")]:
     if _p not in sys.path:
         sys.path.insert(0, _p)
-from ldpc_ops import LDPCCode  # noqa: E402
+from ldpc_ops import LDPCCode
 
 HEADER_BITS = 400
 SLOT_BITS = 800
