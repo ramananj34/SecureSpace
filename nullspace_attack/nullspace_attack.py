@@ -31,6 +31,7 @@ def snap_to_lattice(tele_q, delta_star, quantizer, x_q_levels=None):
     tele_recv = quantizer.dequantize(levels_adv)
     tele_q_dq = quantizer.dequantize(x_q_levels)
     delta_snap = tele_recv - tele_q_dq
+
     dlsb = quantizer.delta_lsb
     sz = delta_snap.size
     return {"delta_info_bits": delta_info_bits, "levels_adv": levels_adv, "x_q_levels": x_q_levels, "tele_recv": tele_recv, "delta_snap": delta_snap, "weight": int(delta_info_bits.sum()), "realized_linf_lsb": float(np.max(np.abs(delta_snap)) / dlsb) if sz else 0.0, "requant_loss_lsb": float(np.max(np.abs(delta_star - delta_snap)) / dlsb) if sz else 0.0}
@@ -100,6 +101,7 @@ def c2_ceiling_attack(chan_id, model, train_features, tele, cmds, labels, label,
     if return_arrays:
         out["_delta_info_bits"] = snap["delta_info_bits"]
         out["_delta_snap"] = snap["delta_snap"]
+        out["_delta_star"] = final.detach().cpu().numpy()
         out["_x_q_levels"] = snap["x_q_levels"]
         out["_tele_q"] = tele_q
     return out
