@@ -5,3 +5,5 @@ smap_msl_data/test/
 smap_msl_data/train/
 runs/
 **/__pycache__/
+nullspace_attack/runs_pilot/
+nullspace_attack/runs_e2/

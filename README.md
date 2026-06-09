@@ -13,27 +13,6 @@
 └── lab_setup.sh
 └── secrets.sh
 └── README.txt
-└── runs/...
-├── ldpc/
-│   └── __init__.py
-│   └── codeword_enumeration.py
-│   └── dvb_s2_ldpc.py
-│   └── dvb_s2_short.py
-│   └── tanner_graph.py
-│   ├── tests/
-│   │   └── __init__.py
-│   │   └── exaust_tanner.py
-│   │   └── test_codeword_enumeration.py
-│   │   └── test_encoding.py
-│   │   └── test_encoding_short.py
-│   │   └── test_tanner.py
-├── baseline_fgsm_pgd/
-│   └── runs/...
-│   └── ceil_attack.py
-│   └── fgsm_pgd_attacks.py
-│   └── test_attacks.py
-│   └── e1_ceil.py
-│   └── fgsm_pgd_attacks_viz.ipynb
 ├── smap_msl_data/
 │   └── channel_manifest.csv
 │   └── channel_manifest.py
@@ -47,6 +26,7 @@
 │   └── test/...
 │   └── train/...
 │   └── 2018-05-19_15.00.10/...
+└── runs/...
 ├── telemanom_reproduction/
 │   ├── VENDOR_telemanom/
 │   │   └── LICENSE.txt
@@ -67,4 +47,43 @@
 │   └── train_all_channels.py
 │   └── train_one_channel.py
 │   └── vendor_smoke_test.py
+├── ldpc/
+│   └── __init__.py
+│   └── codeword_enumeration.py
+│   └── dvb_s2_ldpc.py
+│   └── dvb_s2_short.py
+│   └── tanner_graph.py
+│   ├── tests/
+│   │   └── __init__.py
+│   │   └── exaust_tanner.py
+│   │   └── test_codeword_enumeration.py
+│   │   └── test_encoding.py
+│   │   └── test_encoding_short.py
+│   │   └── test_tanner.py
+├── baseline_fgsm_pgd/
+│   └── runs/...
+│   └── ceil_attack.py
+│   └── fgsm_pgd_attacks.py
+│   └── test_attacks.py
+│   └── e1_ceil.py
+│   └── fgsm_pgd_attacks_viz.ipynb
+├── nullspace_attack_utils/
+│   └── __init__.py
+│   └── frame_packing.py
+│   └── gf2.py
+│   └── ldpc_ops.py
+│   └── projection.py
+│   ├── tests/
+│   │   └── dryrun_pipeline.py
+│   │   └── gf2_tests.py
+│   │   └── job.sbatch
+│   │   └── ldpc_ops_tests.py
+│   │   └── nullspace_longGE_log.txt
+│   │   └── profile_nullspace.py
+│   │   └── test_frame_packing.py
+│   │   └── test_projection.py
+│   │   └── verify_null_space_long_ge_gpu.py
+│   │   └── verify_null_space_long_ge.py
+│   │   └── verify_null_space.py
+├── nullspace_attack/
 ```
