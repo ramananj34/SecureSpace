@@ -86,4 +86,19 @@
 │   │   └── verify_null_space_long_ge.py
 │   │   └── verify_null_space.py
 ├── nullspace_attack/
+│   └── __init__.py
+│   └── e2_pilot.py
+│   └── frame_ops.py
+│   └── nullspace_attack_viz.ipynb
+│   └── nllspace_attack.py
+│   └── oracle_sweep.py
+│   └── run_e2.py
+│   └── weight_analysis.py
+│   ├── tests/
+│   │   └── test_frame_ops.py
+│   │   └── test_lift_snap.py
+│   └── runs_pilot/
+│   └── runs_e2/
+│   └── runs_oracle
+│   └── runs_e3
 ```
