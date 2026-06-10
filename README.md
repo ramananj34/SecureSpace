@@ -90,10 +90,12 @@
 │   └── e2_pilot.py
 │   └── frame_ops.py
 │   └── nullspace_attack_viz.ipynb
-│   └── nllspace_attack.py
+│   └── nullspace_attack.py
 │   └── oracle_sweep.py
 │   └── run_e2.py
 │   └── weight_analysis.py
+│   └── range_sensitivity.py
+│   └── packed_frame_demo.py
 │   ├── tests/
 │   │   └── test_frame_ops.py
 │   │   └── test_lift_snap.py
@@ -101,4 +103,5 @@
 │   └── runs_e2/...
 │   └── runs_oracle/...
 │   └── runs_e3/...
+│   └── runs_range/...
 ```
