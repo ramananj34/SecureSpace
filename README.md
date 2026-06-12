@@ -2,10 +2,11 @@
 - Acquired Datasets and trained LTSMs
 - Reproduced Telemanon results
 - Built DVB-S2 LDPCs
-- PGD baseline attack
+- Implemented PGD baseline attack
+- Implemented Null-space PGD
 
 ### Next steps:
-- Null-space PGD
+- Investigating Defenses
 
 ```
 └── .gitignore
@@ -104,4 +105,17 @@
 │   └── runs_oracle/...
 │   └── runs_e3/...
 │   └── runs_range/...
+├── nullspace_explorations/
+│   └── dvb_s2_rates.py
+│   └── exploration_viz.ipynb
+│   └── frame_ops_rates.py
+│   └── test_rates.py
+│   └── run_e4.py
+│   └── run_e5.py
+│   └── run_e6.py
+│   └── run_flat_train.py
+│   └── runs_e4/
+│   └── runs_e5/
+│   └── runs_e6/
+│   └── runs_flat/
 ```
