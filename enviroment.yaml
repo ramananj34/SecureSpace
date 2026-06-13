@@ -15,6 +15,7 @@ dependencies:
   - tqdm
   - jupyter
   - ipykernel
+  - cryptography
   - pip:
     - kaggle
     - more-itertools
