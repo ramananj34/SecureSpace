@@ -118,4 +118,16 @@
 │   └── runs_e5/
 │   └── runs_e6/
 │   └── runs_flat/
+├── theorem_1/
+│   └── combined_defense.py
+│   └── e8_helpers.py
+│   └── run_e7.py
+│   └── run_e8.py
+│   └── secret_integrity.py
+│   └── test_combined_defense.py
+│   └── test_e8.py
+│   └── test_secret_integrity.py
+│   └── theorem_1_viz.ipynb
+│   └── runs_e7/
+│   └── runs_e8/
 ```
