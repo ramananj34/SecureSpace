@@ -130,4 +130,29 @@
 │   └── theorem_1_viz.ipynb
 │   └── runs_e7/
 │   └── runs_e8/
+├── amrcc/
+│   └── __init__.py
+│   └── adv_train.py
+│   └── amrcc_viz.py
+│   └── eta_w.py
+│   └── counter.py
+│   └── codec.py
+│   └── fy_uniformity.py
+│   └── keyed_permutation.py
+│   └── run_e9.py
+│   └── run_e11.py
+│   └── run_e12.py
+│   └── run_e14.py
+│   └── sampling.py
+│   └── tests/
+│   │   └── __init__.py
+│   │   └── test_codec.py
+│   │   └── test_codespace.py
+│   │   └── test_counter.py
+│   │   └── test_eta_w.py
+│   │   └── test_keyed_permutation.py
+│   │   └── test_sampling.py
+│   └── runs_advtrain/
+│   └── runs_e9/
+│   └── runs_e14/
 ```
