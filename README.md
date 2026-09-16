@@ -133,7 +133,7 @@
 ├── amrcc/
 │   └── __init__.py
 │   └── adv_train.py
-│   └── amrcc_viz.py
+│   └── amrcc_viz.ipynb
 │   └── eta_w.py
 │   └── counter.py
 │   └── codec.py
@@ -144,6 +144,8 @@
 │   └── run_e12.py
 │   └── run_e14.py
 │   └── sampling.py
+│   └── fy_fast.py
+│   └── operational.py
 │   └── tests/
 │   │   └── __init__.py
 │   │   └── test_codec.py
@@ -152,7 +154,10 @@
 │   │   └── test_eta_w.py
 │   │   └── test_keyed_permutation.py
 │   │   └── test_sampling.py
+│   │   └── test_fy_fast.py
 │   └── runs_advtrain/
 │   └── runs_e9/
+│   └── runs_e9_adv/
 │   └── runs_e14/
+│   └── runs_e14_adv/
 ```

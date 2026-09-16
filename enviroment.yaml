@@ -20,3 +20,4 @@ dependencies:
     - kaggle
     - more-itertools
     - cupy-cuda12x
+    - numba
