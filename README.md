@@ -170,6 +170,9 @@
 │   └── analytic_attacker.py
 │   └── lstm_plausibility.py
 │   └── discriminator.py
+│   └── run_e10.py
+│   └── qdither_consolidate.py
+│   └── dither_viz.ipynb
 │   └── tests/
 │   │   └── __init__.py
 │   │   └── test_dither.py
@@ -180,4 +183,7 @@
 │   │   └── test_analytic_attacker.py
 │   │   └── test_lstm_plausibility.py
 │   │   └── test_discriminator.py
+│   │   └── test_run_e10.py
+│   │   └── test_qdither_consolidate.py
+│   └── runs_e10/
 ```
