@@ -1,0 +1,93 @@
+{
+  "rows": [
+    {
+      "sigma_lsb": 0.0,
+      "adv_t5_bitacc": 0.007209411239038621,
+      "adv_t5_max": 0.007209411239038621,
+      "ceiling_diag_upper_bound": 1.75,
+      "adjacency_mi": 1.3180040961759723,
+      "signal_mi": 4.416522768283285,
+      "bound_adj": 0.8117894111701545,
+      "bound_sig": 1.4860219998848074,
+      "bound_min_proxy": 0.8117894111701545,
+      "holds": true,
+      "margin": 0.8045799999311158
+    },
+    {
+      "sigma_lsb": 0.05,
+      "adv_t5_bitacc": 0.024213555526100716,
+      "adv_t5_max": 0.024213555526100716,
+      "ceiling_diag_upper_bound": 2.0,
+      "adjacency_mi": 1.300316172895874,
+      "signal_mi": 4.183446383291397,
+      "bound_adj": 0.8063238099225007,
+      "bound_sig": 1.4462790849783103,
+      "bound_min_proxy": 0.8063238099225007,
+      "holds": true,
+      "margin": 0.7821102543964
+    },
+    {
+      "sigma_lsb": 0.1,
+      "adv_t5_bitacc": 0.0,
+      "adv_t5_max": 0.0,
+      "ceiling_diag_upper_bound": 1.0,
+      "adjacency_mi": 1.2843529996904057,
+      "signal_mi": 4.022815886736848,
+      "bound_adj": 0.8013591578344899,
+      "bound_sig": 1.4182411442940246,
+      "bound_min_proxy": 0.8013591578344899,
+      "holds": true,
+      "margin": 0.8013591578344899
+    },
+    {
+      "sigma_lsb": 0.25,
+      "adv_t5_bitacc": 0.011362430007180402,
+      "adv_t5_max": 0.011362430007180402,
+      "ceiling_diag_upper_bound": 1.25,
+      "adjacency_mi": 1.2487204751957144,
+      "signal_mi": 3.61372072892743,
+      "bound_adj": 0.790164690174053,
+      "bound_sig": 1.3441950619101808,
+      "bound_min_proxy": 0.790164690174053,
+      "holds": true,
+      "margin": 0.7788022601668726
+    },
+    {
+      "sigma_lsb": 0.5,
+      "adv_t5_bitacc": 0.023342647695241414,
+      "adv_t5_max": 0.023342647695241414,
+      "ceiling_diag_upper_bound": 0.75,
+      "adjacency_mi": 1.2056868899381774,
+      "signal_mi": 3.185000325630519,
+      "bound_adj": 0.776429935647183,
+      "bound_sig": 1.2619430109221492,
+      "bound_min_proxy": 0.776429935647183,
+      "holds": true,
+      "margin": 0.7530872879519416
+    },
+    {
+      "sigma_lsb": 1.0,
+      "adv_t5_bitacc": 0.0004547722033989565,
+      "adv_t5_max": 0.0004547722033989565,
+      "ceiling_diag_upper_bound": 0.44047619047619047,
+      "adjacency_mi": 1.1227362374146053,
+      "signal_mi": 2.7205929763220986,
+      "bound_adj": 0.7492450324875719,
+      "bound_sig": 1.1663174902920086,
+      "bound_min_proxy": 0.7492450324875719,
+      "holds": true,
+      "margin": 0.748790260284173
+    }
+  ],
+  "summary": {
+    "n": 6,
+    "n_hold": 6,
+    "bound_monotone_decreasing_in_sigma": true,
+    "bound_at_sigma0": 0.8117894111701545,
+    "adv_t5_at_sigma0": 0.007209411239038621,
+    "margin_at_sigma0": 0.8045799999311158,
+    "min_margin": 0.748790260284173,
+    "bound_at_sigma_max": 0.7492450324875719,
+    "adv_t4": 0.0
+  }
+}

@@ -188,6 +188,10 @@
 │   └── runs_e10/
 ├── theory_helpers/
 │   └── security_game.py
+│   └── tightness_scatter.py
+│   └── tightness_scatter.png
+│   └── qdither_bound_check.png
 │   └── tests/
 │   │   └── test_security_game.py
+│   │   └── test_qdither_bound_check.py
 ```
