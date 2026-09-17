@@ -62,7 +62,7 @@
 │   │   └── test_encoding_short.py
 │   │   └── test_tanner.py
 ├── baseline_fgsm_pgd/
-│   └── runs/...
+│   └── runs_e1/...
 │   └── ceil_attack.py
 │   └── fgsm_pgd_attacks.py
 │   └── test_attacks.py
@@ -160,4 +160,24 @@
 │   └── runs_e9_adv/
 │   └── runs_e14/
 │   └── runs_e14_adv/
+├── dither_expiriments/
+│   └── __init__.py
+│   └── dither.py
+│   └── legit_cost.py
+│   └── info_measures.py
+│   └── sa_search.py
+│   └── recovery_metrics.py
+│   └── analytic_attacker.py
+│   └── lstm_plausibility.py
+│   └── discriminator.py
+│   └── tests/
+│   │   └── __init__.py
+│   │   └── test_dither.py
+│   │   └── test_legit_cost.py
+│   │   └── test_info_measures.py
+│   │   └── test_sa_search.py
+│   │   └── test_recovery_metrics.py
+│   │   └── test_analytic_attacker.py
+│   │   └── test_lstm_plausibility.py
+│   │   └── test_discriminator.py
 ```

@@ -4,6 +4,7 @@ smap_msl_data/2018-05-19_15.00.10/
 smap_msl_data/test/
 smap_msl_data/train/
 runs/
+baseline_fgsm_pgd/runs_e1/
 **/__pycache__/
 nullspace_attack/runs_pilot/
 nullspace_attack/runs_e2/
