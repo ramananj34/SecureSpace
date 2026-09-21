@@ -25,3 +25,5 @@ amrcc/runs_e9_adv/
 dither_expiriments/runs_e10/
 prg_quality/
 prng_testing/runs_e13/
+code_smoothing_cert/runs_e14_full/
+code_smoothing_cert/runs_cohen/

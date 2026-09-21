@@ -213,7 +213,14 @@
 ├── code_smoothing_cert/
 │   └── certificate.py
 │   └── cohen_smoothing.py
+│   └── compare_norms.py
+│   └── run_e14_full.py
+│   └── run_cohen.py
 │   └── tests/
 │   │   └── test_certificate.py
 │   │   └── test_cohen_smoothing.py
+│   │   └── test_compare_norms.py
+│   │   └── test_run_cohen.py
+│   └── runs_e14_full/
+│   └── runs_cohen/
 ```
