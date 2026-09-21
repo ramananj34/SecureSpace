@@ -188,10 +188,32 @@
 │   └── runs_e10/
 ├── theory_helpers/
 │   └── security_game.py
+│   └── __init__.py
 │   └── tightness_scatter.py
 │   └── tightness_scatter.png
 │   └── qdither_bound_check.png
 │   └── tests/
 │   │   └── test_security_game.py
 │   │   └── test_qdither_bound_check.py
+├── prng_testing/
+│   └── weak_prng.py
+│   └── prng_distinguish.py
+│   └── attribution.py
+│   └── run_e13.py
+│   └── e13_verify.py
+│   └── e13_verify.json
+│   └── prng_viz.ipynb
+│   └── tests/
+│   │   └── test_weak_prng.py
+│   │   └── test_prng_distinguish.py
+│   │   └── test_attribution.py
+│   │   └── test_run_e13.py
+│   │   └── test_e13_verify.py
+│   └── runs_e13/
+├── code_smoothing_cert/
+│   └── certificate.py
+│   └── cohen_smoothing.py
+│   └── tests/
+│   │   └── test_certificate.py
+│   │   └── test_cohen_smoothing.py
 ```
