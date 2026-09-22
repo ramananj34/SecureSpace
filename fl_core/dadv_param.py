@@ -33,12 +33,19 @@ def param_jacobian(model, x_windows, f_score=None, device=None):
     if X.ndim == 2:
         X = X[None]
     rows = []
-    with torch.enable_grad(), torch.backends.cudnn.flags(enabled=False):
-        for a in range(X.shape[0]):
-            xa = torch.tensor(X[a][None], device=device, requires_grad=False)
-            out = f_score(model, xa)
-            g = torch.autograd.grad(out[0, 0], params, retain_graph=False)
-            rows.append(_flat_grad(g))
+    prev_flags = [p.requires_grad for p in params]
+    try:
+        for p in params:
+            p.requires_grad_(True)
+        with torch.enable_grad(), torch.backends.cudnn.flags(enabled=False):
+            for a in range(X.shape[0]):
+                xa = torch.tensor(X[a][None], device=device, requires_grad=False)
+                out = f_score(model, xa)
+                g = torch.autograd.grad(out[0, 0], params, retain_graph=False)
+                rows.append(_flat_grad(g))
+    finally:
+        for p, flag in zip(params, prev_flags):
+            p.requires_grad_(flag)
     return np.stack(rows)
 
 def v_theta_single_anchor(model, x_window, tau=0.1, f_score=None, device=None):

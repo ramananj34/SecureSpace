@@ -89,7 +89,7 @@ def local_update(model_ctor, global_state, features_slice, cfg, local_epochs=1, 
     model = model_ctor().to(device)
     model.load_state_dict({k: v.to(device) for k, v in global_state.items()})
     g0, shapes = flatten_params(model.state_dict())
-    X, y = _windows(features_slice, cfg.sequence_length)
+    X, y = _windows(features_slice, cfg.l_s)
     if X.shape[0] == 0:
         return np.zeros_like(g0), shapes
     Xt = torch.tensor(X, dtype=torch.float32, device=device)
