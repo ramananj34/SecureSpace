@@ -1,0 +1,68 @@
+{
+  "n_points": 96,
+  "d_adv_effective_trace": {
+    "median": 0.9999999999999998,
+    "min": 0.999853726636379,
+    "max": 1.0000000000000004,
+    "mean": 0.9999983390789379,
+    "constant": false
+  },
+  "d_adv_int_median": 1,
+  "implied_d_adv_frame": 39.99999999999999,
+  "d_adv_frame_in_proposal_range_25_100": true,
+  "theorem4_within_20pct": {
+    "fraction": 1.0,
+    "n_pass": 384,
+    "n_total": 384
+  },
+  "reduction_factor": {
+    "median": 600.0091554131382,
+    "min": 600.0091554131377,
+    "max": 600.0969336101158
+  },
+  "reduction_in_proposal_range_243_972": true,
+  "cor2_cross_equals_trace": {
+    "median_rel_error": 0.023207083012506503,
+    "max_rel_error": 0.13873156296761835
+  },
+  "d66_three_quantities": {
+    "n": 96,
+    "eff_trace_median": 0.9999999999999998,
+    "geom_dim_median": 1.0,
+    "frobenius_median": 0.9999999999999997,
+    "three_quantities_coincide": true,
+    "note": "coincide (gradient fully in frame -> trap-1 distinction not exercised)"
+  },
+  "d_adv_histogram": [
+    {
+      "lo": 0.0,
+      "hi": 0.5,
+      "count": 0
+    },
+    {
+      "lo": 0.5,
+      "hi": 1.5,
+      "count": 96
+    },
+    {
+      "lo": 1.5,
+      "hi": 2.5,
+      "count": 0
+    },
+    {
+      "lo": 2.5,
+      "hi": 5.0,
+      "count": 0
+    },
+    {
+      "lo": 5.0,
+      "hi": 10.0,
+      "count": 0
+    },
+    {
+      "lo": 10.0,
+      "hi": 100.0,
+      "count": 0
+    }
+  ]
+}

@@ -217,7 +217,7 @@
 │   └── run_e14_full.py
 │   └── run_cohen.py
 │   └── e14_verify.py
-│   └── e14_viz.py
+│   └── e14_viz.ipynb
 │   └── tests/
 │   │   └── test_certificate.py
 │   │   └── test_cohen_smoothing.py
@@ -226,4 +226,19 @@
 │   │   └── test_e14_verify.py
 │   └── runs_e14_full/
 │   └── runs_cohen/
+├── adv_subspace/
+│   └── jacobian_dadv.py
+│   └── theorem4_energy.py
+│   └── energy_analysis.py
+│   └── run_e15.py
+│   └── e15_verify.py
+│   └── e15_verify.json
+│   └── 15_viz.ipynb
+│   └── tests/
+│   │   └── test_jacobian_dadv.py
+│   │   └── test_theorem4_energy.py
+│   │   └── test_energy_analysis.py
+│   │   └── test_run_e15.py
+│   │   └── test_e15_verify.py
+│   └── runs_e15/
 ```
