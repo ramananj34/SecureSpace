@@ -4,9 +4,13 @@
 - Built DVB-S2 LDPCs
 - Implemented PGD baseline attack
 - Implemented Null-space PGD
+- Implemented Defenses
+- Verified Theorems and Robustness
 
 ### Next steps:
-- Investigating Defenses
+- Federated Learning Extension
+- Demos
+- Write a Paper
 
 ```
 └── .gitignore
