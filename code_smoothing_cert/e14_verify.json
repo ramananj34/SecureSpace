@@ -1,0 +1,242 @@
+{
+  "n_in_scope_points": 8,
+  "n_out_of_scope": 0,
+  "n_nonmonotone": 4,
+  "gate_frozen_repro": {
+    "n_checked": 8,
+    "n_mismatch": 0,
+    "mismatches": [],
+    "exact_reproduction": true
+  },
+  "certified_accuracy_strict": [
+    {
+      "radius": 1,
+      "certified_accuracy": 1.0
+    },
+    {
+      "radius": 4,
+      "certified_accuracy": 1.0
+    },
+    {
+      "radius": 16,
+      "certified_accuracy": 1.0
+    },
+    {
+      "radius": 32,
+      "certified_accuracy": 0.875
+    },
+    {
+      "radius": 64,
+      "certified_accuracy": 0.875
+    },
+    {
+      "radius": 128,
+      "certified_accuracy": 0.875
+    },
+    {
+      "radius": 256,
+      "certified_accuracy": 0.75
+    },
+    {
+      "radius": 512,
+      "certified_accuracy": 0.625
+    }
+  ],
+  "certified_accuracy_ci_aware": [
+    {
+      "radius": 1,
+      "certified_accuracy": 1.0
+    },
+    {
+      "radius": 4,
+      "certified_accuracy": 1.0
+    },
+    {
+      "radius": 16,
+      "certified_accuracy": 0.875
+    },
+    {
+      "radius": 32,
+      "certified_accuracy": 0.875
+    },
+    {
+      "radius": 64,
+      "certified_accuracy": 0.875
+    },
+    {
+      "radius": 128,
+      "certified_accuracy": 0.875
+    },
+    {
+      "radius": 256,
+      "certified_accuracy": 0.75
+    },
+    {
+      "radius": 512,
+      "certified_accuracy": 0.625
+    }
+  ],
+  "radius_at_coverage": 16,
+  "radius_at_coverage_ci_aware": 4,
+  "coverage": 0.95,
+  "rcert_summary": {
+    "n_points": 8,
+    "r_cert_median": 512.0,
+    "r_cert_mean": 370.0,
+    "r_cert_min": 16.0,
+    "r_cert_max": 512.0,
+    "frac_rcert_ge_50": 0.875,
+    "n_strict_lt_simple": 0,
+    "frac_nonmonotone": 0.0
+  },
+  "thm8p5_rcert50_at_95": false,
+  "cohen_comparison": {
+    "per_point": [
+      {
+        "ours_hamming_r_cert_bits": 512.0,
+        "ours_hamming_fraction": 0.1140819964349376,
+        "cohen_l2_radius_signal_units": 0.472905765436028,
+        "cohen_l2_fraction": 0.019966097066142118,
+        "heuristic_l2_to_equiv_msb_flips": 0.472905765436028,
+        "incomparable_note": "Hamming r_cert (bits) and Cohen L2 radius (signal units) are in different spaces; fractions/bridges are heuristic context, not a common metric. No single comparison scalar is reported (proposal L11).",
+        "point_id": "A-2[4450, 4560]"
+      },
+      {
+        "ours_hamming_r_cert_bits": 512.0,
+        "ours_hamming_fraction": 0.10062893081761007,
+        "cohen_l2_radius_signal_units": 0.5512965586388714,
+        "cohen_l2_fraction": 0.02186033050147564,
+        "heuristic_l2_to_equiv_msb_flips": 0.5512965586388714,
+        "incomparable_note": "Hamming r_cert (bits) and Cohen L2 radius (signal units) are in different spaces; fractions/bridges are heuristic context, not a common metric. No single comparison scalar is reported (proposal L11).",
+        "point_id": "A-3[4575, 4760]"
+      },
+      {
+        "ours_hamming_r_cert_bits": 512.0,
+        "ours_hamming_fraction": 0.1140819964349376,
+        "cohen_l2_radius_signal_units": 0.5512965586388714,
+        "cohen_l2_fraction": 0.023275758949280165,
+        "heuristic_l2_to_equiv_msb_flips": 0.5512965586388714,
+        "incomparable_note": "Hamming r_cert (bits) and Cohen L2 radius (signal units) are in different spaces; fractions/bridges are heuristic context, not a common metric. No single comparison scalar is reported (proposal L11).",
+        "point_id": "A-4[4550, 4660]"
+      },
+      {
+        "ours_hamming_r_cert_bits": 16.0,
+        "ours_hamming_fraction": 0.0005541701302299807,
+        "cohen_l2_radius_signal_units": 0.24208345136904283,
+        "cohen_l2_fraction": 0.004029690220974208,
+        "heuristic_l2_to_equiv_msb_flips": 0.24208345136904283,
+        "incomparable_note": "Hamming r_cert (bits) and Cohen L2 radius (signal units) are in different spaces; fractions/bridges are heuristic context, not a common metric. No single comparison scalar is reported (proposal L11).",
+        "point_id": "D-1[5250, 8508]"
+      },
+      {
+        "ours_hamming_r_cert_bits": 512.0,
+        "ours_hamming_fraction": 0.05812897366030881,
+        "cohen_l2_radius_signal_units": 0.5512965586388714,
+        "cohen_l2_fraction": 0.01661466626021404,
+        "heuristic_l2_to_equiv_msb_flips": 0.5512965586388714,
+        "incomparable_note": "Hamming r_cert (bits) and Cohen L2 radius (signal units) are in different spaces; fractions/bridges are heuristic context, not a common metric. No single comparison scalar is reported (proposal L11).",
+        "point_id": "D-16[600, 1250]"
+      },
+      {
+        "ours_hamming_r_cert_bits": 512.0,
+        "ours_hamming_fraction": 0.08755129958960328,
+        "cohen_l2_radius_signal_units": 0.5512965586388714,
+        "cohen_l2_fraction": 0.020390439793576347,
+        "heuristic_l2_to_equiv_msb_flips": 0.5512965586388714,
+        "incomparable_note": "Hamming r_cert (bits) and Cohen L2 radius (signal units) are in different spaces; fractions/bridges are heuristic context, not a common metric. No single comparison scalar is reported (proposal L11).",
+        "point_id": "E-7[5394, 5674]"
+      },
+      {
+        "ours_hamming_r_cert_bits": 128.0,
+        "ours_hamming_fraction": 0.02282453637660485,
+        "cohen_l2_radius_signal_units": 0.0,
+        "cohen_l2_fraction": 0.0,
+        "heuristic_l2_to_equiv_msb_flips": 0.0,
+        "incomparable_note": "Hamming r_cert (bits) and Cohen L2 radius (signal units) are in different spaces; fractions/bridges are heuristic context, not a common metric. No single comparison scalar is reported (proposal L11).",
+        "point_id": "M-3[1250, 1500]"
+      },
+      {
+        "ours_hamming_r_cert_bits": 256.0,
+        "ours_hamming_fraction": 0.05604203152364273,
+        "cohen_l2_radius_signal_units": 0.0,
+        "cohen_l2_fraction": 0.0,
+        "heuristic_l2_to_equiv_msb_flips": 0.0,
+        "incomparable_note": "Hamming r_cert (bits) and Cohen L2 radius (signal units) are in different spaces; fractions/bridges are heuristic context, not a common metric. No single comparison scalar is reported (proposal L11).",
+        "point_id": "T-12[630, 750]"
+      }
+    ],
+    "aggregate": {
+      "n_points": 8,
+      "median_ours_r_cert_bits": 512.0,
+      "median_ours_hamming_fraction": 0.07284013662495605,
+      "median_cohen_l2_radius": 0.5121011620374497,
+      "median_cohen_l2_fraction": 0.01829038166317808,
+      "median_cohen_equiv_msb_flips": 0.5121011620374497,
+      "note": "Native quantities aggregated SEPARATELY. Hamming and L2 medians are NOT combined into a single ratio; the two certificates measure robustness in different norms (proposal L11)."
+    }
+  },
+  "cross_method_agreement": {
+    "per_point_flags": [
+      {
+        "point_id": "A-2[4450, 4560]",
+        "ours_fragile_rcert_lt50": false,
+        "cohen_abstain": false,
+        "cohen_R": 0.472905765436028,
+        "r_cert": 512
+      },
+      {
+        "point_id": "A-3[4575, 4760]",
+        "ours_fragile_rcert_lt50": false,
+        "cohen_abstain": false,
+        "cohen_R": 0.5512965586388714,
+        "r_cert": 512
+      },
+      {
+        "point_id": "A-4[4550, 4660]",
+        "ours_fragile_rcert_lt50": false,
+        "cohen_abstain": false,
+        "cohen_R": 0.5512965586388714,
+        "r_cert": 512
+      },
+      {
+        "point_id": "D-1[5250, 8508]",
+        "ours_fragile_rcert_lt50": true,
+        "cohen_abstain": false,
+        "cohen_R": 0.24208345136904283,
+        "r_cert": 16
+      },
+      {
+        "point_id": "D-16[600, 1250]",
+        "ours_fragile_rcert_lt50": false,
+        "cohen_abstain": false,
+        "cohen_R": 0.5512965586388714,
+        "r_cert": 512
+      },
+      {
+        "point_id": "E-7[5394, 5674]",
+        "ours_fragile_rcert_lt50": false,
+        "cohen_abstain": false,
+        "cohen_R": 0.5512965586388714,
+        "r_cert": 512
+      },
+      {
+        "point_id": "M-3[1250, 1500]",
+        "ours_fragile_rcert_lt50": false,
+        "cohen_abstain": true,
+        "cohen_R": 0.0,
+        "r_cert": 128
+      },
+      {
+        "point_id": "T-12[630, 750]",
+        "ours_fragile_rcert_lt50": false,
+        "cohen_abstain": true,
+        "cohen_R": 0.0,
+        "r_cert": 256
+      }
+    ],
+    "both_fragile": 0,
+    "both_robust": 5,
+    "agreement_rate": 0.625
+  },
+  "subset_note": "EVALUATED SUBSET (8 in-scope points), NOT the full SMAP/MSL test set; the full-population sweep is a deferred resumable background job."
+}

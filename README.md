@@ -216,11 +216,14 @@
 │   └── compare_norms.py
 │   └── run_e14_full.py
 │   └── run_cohen.py
+│   └── e14_verify.py
+│   └── e14_viz.py
 │   └── tests/
 │   │   └── test_certificate.py
 │   │   └── test_cohen_smoothing.py
 │   │   └── test_compare_norms.py
 │   │   └── test_run_cohen.py
+│   │   └── test_e14_verify.py
 │   └── runs_e14_full/
 │   └── runs_cohen/
 ```
