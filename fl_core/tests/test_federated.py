@@ -50,12 +50,15 @@ def test_aggregate_dispatch():
     r = F.aggregate("krum", U, f=1)
     assert r.shape == (2,)
 
-def test_temporal_partitions_cover_stream():
-    parts = F.temporal_partitions(1000, 40, window=250)
+def test_temporal_partitions_yield_trainable_slices():
+    window, min_windows = 250, 32
+    parts = F.temporal_partitions(8000, 40, window=window, min_windows=min_windows)
     assert len(parts) == 40
-    assert parts[0][0] == 0 and parts[-1][1] == 1000
-    for i in range(len(parts) - 1):
-        assert parts[i][1] == parts[i + 1][0]
+    for lo, hi in parts:
+        assert (hi - lo) - window >= min_windows
+    assert parts[0][0] == 0 and parts[-1][1] == 8000
+    long_parts = F.temporal_partitions(100000, 40, window=250, min_windows=32)
+    assert (long_parts[0][1] - long_parts[0][0]) == 100000 // 40
 
 def test_flatten_unflatten_roundtrip():
     try:

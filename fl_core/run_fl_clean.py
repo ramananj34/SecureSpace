@@ -109,8 +109,8 @@ def main():
     ap.add_argument("--channel", default="A-1")
     ap.add_argument("--n-planes", type=int, default=5)
     ap.add_argument("--sats-per-plane", type=int, default=8)
-    ap.add_argument("--local-epochs", type=int, default=1)
-    ap.add_argument("--lr", type=float, default=1e-3)
+    ap.add_argument("--local-epochs", type=int, default=5)
+    ap.add_argument("--lr", type=float, default=1e-2)
     ap.add_argument("--aggregators", nargs="*", default=["fedavg", "coord_median", "krum"])
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--force", action="store_true")
@@ -130,7 +130,7 @@ def main():
     print(f"contact graph: {rec['contact_graph']['n_edges']} edges, "
           f"connected={rec['contact_graph']['connected']}, density={rec['contact_graph']['density']:.2f}")
     for agg, r in rec["aggregators"].items():
-        print(f"  {agg:13}: global_delta_norm={r['global_delta_norm']:.4f}  recall={r['recall']:.3f} "
+        print(f"  {agg:13}: global_delta_norm={r['global_delta_norm']:.6e}  recall={r['recall']:.3f} "
               f"({r['n_detected']}/{r['n_labels']})  update_finite={r['update_finite']}")
     if "d_adv_prime_single_anchor" in rec:
         sa = rec["d_adv_prime_single_anchor"]

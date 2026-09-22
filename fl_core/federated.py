@@ -69,15 +69,16 @@ def unflatten_params(vec, shapes, like_state_dict):
         off += n
     return out
 
-def temporal_partitions(n_timesteps, n_sats, window):
-    total = n_timesteps
-    per = total // n_sats
-    parts = []
-    for s in range(n_sats):
-        lo = s * per
-        hi = (s + 1) * per if s < n_sats - 1 else total
-        parts.append((lo, hi))
-    return parts
+def temporal_partitions(n_timesteps, n_sats, window, min_windows=32):
+    need = window + min_windows
+    contiguous = n_timesteps // n_sats
+    slice_len = max(contiguous, need)
+    slice_len = min(slice_len, n_timesteps)
+    if n_sats == 1:
+        return [(0, n_timesteps)]
+    last_start = n_timesteps - slice_len
+    starts = np.linspace(0, max(last_start, 0), n_sats).astype(int)
+    return [(int(s), int(s + slice_len)) for s in starts]
 
 def local_update(model_ctor, global_state, features_slice, cfg, local_epochs=1, lr=1e-3,
                  device=None, seed=0):
