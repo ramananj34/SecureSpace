@@ -252,11 +252,16 @@
 │   └── dadv_param.py
 │   └── theorem5_energy.py
 │   └── run_fl_clean.py
+│   └── run_e16.py
+│   └── fl_attack.py
 │   └── tests/
 │   │   └── test_constellation.py
 │   │   └── test_federated.py
 │   │   └── test_grad_channel.py
 │   │   └── test_dadv_param_theorem5_energy.py
 │   │   └── test_run_fl_clean.py
+│   │   └── test_run_e16.py
+│   │   └── test_fl_attack.py
 │   └── runs_fl_clean/
+│   └── runs_e16/
 ```
