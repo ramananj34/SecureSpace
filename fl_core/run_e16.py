@@ -26,12 +26,12 @@ except Exception:
 
 REGIMES = ["fedavg", "median", "fedavg_perm", "median_perm"]
 
-def _clean_holdout_windows(features, l_s, n_windows=200, seed=0):
+def _clean_holdout_windows(features, l_s, holdout_len=600, n_windows=200):
     T = len(features)
-    n = min(n_windows, T - l_s)
-    start = T - l_s - n
-    X = np.stack([features[start + i:start + i + l_s] for i in range(n)])
-    y = features[start + l_s:start + l_s + n, 0]
+    hstart = T - holdout_len
+    n = min(n_windows, holdout_len - l_s)
+    X = np.stack([features[hstart + i:hstart + i + l_s] for i in range(n)])
+    y = features[hstart + l_s:hstart + l_s + n, 0]
     return X.astype(np.float32), y.astype(np.float32)
 
 
@@ -60,14 +60,15 @@ def run_regime(chan, regime, bm_frac, R, con, cfg, q, data, runs_dir, local_epoc
     from telemanom_lstm import TelemanomLSTM
     ctor = lambda: TelemanomLSTM(clean_model.config)
     theta_clean, shapes = FED.flatten_params(clean_model.state_dict())
-    Xh, yh = _clean_holdout_windows(features, cfg.l_s)
+    HOLDOUT_LEN = 600
+    Xh, yh = _clean_holdout_windows(features, cfg.l_s, holdout_len=HOLDOUT_LEN)
     mse_clean = _mse(clean_model, Xh, yh, DEVICE)
-
     global_vec = theta_clean.copy()
     M = con.n_sats
     B = int(round(bm_frac * M))
     B_mask = ATK.byzantine_mask(M, B, seed=seed)
-    parts = FED.temporal_partitions(len(features), M, cfg.l_s)
+    train_region = features[: len(features) - HOLDOUT_LEN]
+    parts = FED.temporal_partitions(len(train_region), M, cfg.l_s)
     gq = GC.GradientQuantizer(b=int(q.b))
     agg_name, perm_on = ATK.regime_aggregator(regime)
 
