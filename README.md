@@ -6,10 +6,10 @@
 - Implemented Null-space PGD
 - Implemented Defenses
 - Verified Theorems and Robustness
-
-### Next steps:
 - Federated Learning Extension
 - Demos
+
+### Next steps:
 - Write a Paper
 
 ```
@@ -255,6 +255,9 @@
 │   └── run_e16.py
 │   └── fl_attack.py
 │   └── theorem5prime_energy.py
+│   └── e16_verify.py
+│   └── e16_verify.json
+│   └── e16_viz.ipynb
 │   └── tests/
 │   │   └── test_constellation.py
 │   │   └── test_federated.py
@@ -264,6 +267,22 @@
 │   │   └── test_run_e16.py
 │   │   └── test_fl_attack.py
 │   │   └── test_theorem5prime_energy.py
+│   │   └── test_e16_verify.py
 │   └── runs_fl_clean/
 │   └── runs_e16/
+├── demos/
+│   └── uplink.py
+│   └── bp_decoder.py
+│   └── link_budget.py
+│   └── run_e17e18.py
+│   └── e17e18_verify.py
+│   └── e17e18_verify.json
+│   └── demos_viz.ipynb
+│   └── tests/
+│   │   └── test_uplink.py
+│   │   └── test_bp_decoder.py
+│   │   └── test_link_budget.py
+│   │   └── test_run_e17e18.py
+│   │   └── test_e17e18_verify.py
+│   └── runs_e17e18/
 ```

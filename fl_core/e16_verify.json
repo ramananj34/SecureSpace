@@ -1,0 +1,162 @@
+{
+  "regime_table": {
+    "fedavg": {
+      "0.0": {
+        "mse_ratio": 0.9572897710094879,
+        "f1": 1.0
+      },
+      "0.1": {
+        "mse_ratio": 4381.21928868421,
+        "f1": 0.0
+      },
+      "0.3": {
+        "mse_ratio": 72159.60700218209,
+        "f1": 0.0
+      },
+      "0.5": {
+        "mse_ratio": 364447.43853972893,
+        "f1": 0.0
+      }
+    },
+    "median": {
+      "0.0": {
+        "mse_ratio": 0.9287434711759295,
+        "f1": 1.0
+      },
+      "0.1": {
+        "mse_ratio": 0.9353315967655643,
+        "f1": 1.0
+      },
+      "0.3": {
+        "mse_ratio": 0.9681576505361752,
+        "f1": 1.0
+      },
+      "0.5": {
+        "mse_ratio": 572922.3694107698,
+        "f1": 0.0
+      }
+    },
+    "fedavg_perm": {
+      "0.0": {
+        "mse_ratio": 0.9572897710094879,
+        "f1": 1.0
+      },
+      "0.1": {
+        "mse_ratio": 0.9500831876964553,
+        "f1": 1.0
+      },
+      "0.3": {
+        "mse_ratio": 0.9669445771147683,
+        "f1": 1.0
+      },
+      "0.5": {
+        "mse_ratio": 0.9269581891451895,
+        "f1": 1.0
+      }
+    },
+    "median_perm": {
+      "0.0": {
+        "mse_ratio": 0.9287434711759295,
+        "f1": 1.0
+      },
+      "0.1": {
+        "mse_ratio": 0.9350542124609242,
+        "f1": 1.0
+      },
+      "0.3": {
+        "mse_ratio": 0.9639112312827683,
+        "f1": 1.0
+      },
+      "0.5": {
+        "mse_ratio": 0.9997846491132698,
+        "f1": 1.0
+      }
+    }
+  },
+  "sec85": {
+    "per_regime": {
+      "fedavg": {
+        "clean_fed_baseline": 0.9572897710094879,
+        "bm30": 72159.60700218209,
+        "ratio_to_clean_fed": 75379.0640905813,
+        "within_tol": false
+      },
+      "median": {
+        "clean_fed_baseline": 0.9287434711759295,
+        "bm30": 0.9681576505361752,
+        "ratio_to_clean_fed": 1.042438176507816,
+        "within_tol": true
+      },
+      "fedavg_perm": {
+        "clean_fed_baseline": 0.9572897710094879,
+        "bm30": 0.9669445771147683,
+        "ratio_to_clean_fed": 1.0100855628020544,
+        "within_tol": true
+      },
+      "median_perm": {
+        "clean_fed_baseline": 0.9287434711759295,
+        "bm30": 0.9639112312827683,
+        "ratio_to_clean_fed": 1.037865956745097,
+        "within_tol": true
+      }
+    },
+    "regime3b_within_5pct_at_30": true,
+    "regime1_collapse_bm": 0.1,
+    "fedavg_curve": {
+      "0.0": 0.9572897710094879,
+      "0.1": 4381.21928868421,
+      "0.3": 72159.60700218209,
+      "0.5": 364447.43853972893
+    }
+  },
+  "compare_3b_vs_2": {
+    "rows": [
+      {
+        "bm": 0.0,
+        "r2_mse": 0.9287434711759295,
+        "r3b_mse": 0.9287434711759295,
+        "r2_robust": true,
+        "r3b_robust": true,
+        "keyed_perm_rescues_median": false
+      },
+      {
+        "bm": 0.1,
+        "r2_mse": 0.9353315967655643,
+        "r3b_mse": 0.9350542124609242,
+        "r2_robust": true,
+        "r3b_robust": true,
+        "keyed_perm_rescues_median": false
+      },
+      {
+        "bm": 0.3,
+        "r2_mse": 0.9681576505361752,
+        "r3b_mse": 0.9639112312827683,
+        "r2_robust": true,
+        "r3b_robust": true,
+        "keyed_perm_rescues_median": false
+      },
+      {
+        "bm": 0.5,
+        "r2_mse": 572922.3694107698,
+        "r3b_mse": 0.9997846491132698,
+        "r2_robust": false,
+        "r3b_robust": true,
+        "keyed_perm_rescues_median": true
+      }
+    ],
+    "keyed_perm_rescues_median_at_some_bm": true,
+    "verdict": "3b>2 at the median's Byzantine boundary (keyed perm converts unbounded->bounded, rescuing the median where B>=M/2 breaks it); IDENTICAL where both robust (trap D: d_adv' adds nothing to the median bound when it already holds)."
+  },
+  "theorem5prime": {
+    "derivation": {
+      "median_robust_bounded_by_honest_spread": true,
+      "trap_d_aligned_defeats_dadv_reduction": true,
+      "aligned_proj_over_full": 0.2940416503045741,
+      "dadv_over_d": 0.08333333333333333
+    },
+    "note": "Thm 5' verified two ways: (a) derivation/brute-force here; (b) empirically by the E16 sweep -- median robust to B<M/2 (R2 at 30%), collapses at B=M/2 vs unbounded (R2 at 50%), rescued by keyed perm's bounded poison (R3b at 50%)."
+  },
+  "collapse_threshold": 2.0,
+  "channel_note": "D-16 (clean detect F1=1.0, mid-variance, E2-attackable); A-1 rejected (flat_train, degenerate holdout, F1=0). Baseline = clean FEDERATED (B/M=0), not the frozen model.",
+  "reduced_rounds_note": "R=20, headline regime x B/M matrix. Full 100-round sweep deferred; the regime separation is visible early and stable."
+}

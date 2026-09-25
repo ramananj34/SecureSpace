@@ -1,0 +1,32 @@
+{
+  "link_budget_0db": {
+    "all_ci_overlap": true,
+    "max_bler_gap": 0.0050000000000000044,
+    "n_ebn0": 6,
+    "rate": 0.4444444444444444
+  },
+  "eps_dec": {
+    "max_eps_dec": 0.0,
+    "max_ci_hi": 0.00917980458366526,
+    "operating_snrs": [
+      3.0,
+      3.5
+    ],
+    "validates_eps_dec_zero": true
+  },
+  "e17_uplink": {
+    "targeting_dilution": 14.75301120035284,
+    "targeted_damage_undef": 0.019756878358127176,
+    "targeted_damage_amrcc": 0.001339175988536812,
+    "l2_dilution": 2.302867621405628,
+    "defense_holds": true
+  },
+  "endtoend": {
+    "n_frames": 3,
+    "bp_failures": 0,
+    "ber": 0.0,
+    "detection_preserved": true,
+    "f1_true": 1.0,
+    "f1_recovered": 1.0
+  }
+}
